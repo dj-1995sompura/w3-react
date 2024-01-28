@@ -1,0 +1,13 @@
+
+
+button {
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    font-size: 16px;
+    box-shadow: none;
+    border: 0;
+    border-radius: 10px;
+    line-height: normal;
+    text-transform: capitalize;
+}
