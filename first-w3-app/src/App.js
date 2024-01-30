@@ -1,33 +1,23 @@
 import "./App.css";
-import Container from "./component/ClassCompUnmount";
-// import Person from "./component/Classcomponent";
-import Brand from "./component/Component";
-
+import Listcomp from "./component/Listcomp";
+import Props from "./component/Props";
 
 
 function App() {
-  // const myelement = (
-  //   <table>
-  //     <tr>
-  //       <th>Name</th>
-  //     </tr>
-  //     <tr>
-  //       <td>John</td>
-  //     </tr>
-  //     <tr>
-  //       <td>Elsa</td>
-  //     </tr>
-  //   </table>
-  //   );
+  let item = {car:"red", brand:"ford"}
+
+  let clickHandler = (a,b) =>{
+    alert(a);
+    console.log(b.type);
+  }
+
+  
   return (
     <div className="App">
       <header className="App-header">
-      {/* {myelement}
-      <h1>{3+5}</h1> */}
-      <Brand></Brand>
-      {/* <Person age="30" color="violet"></Person> */}
-      <br></br>
-      <Container></Container>
+        <Props color={item} show={true}></Props>
+        <button type="button" onClick={(e)=> clickHandler("chutiya",e)}>Click button</button>
+        <Listcomp></Listcomp>
       </header>
     </div>
   );

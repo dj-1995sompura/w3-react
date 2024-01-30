@@ -1,7 +1,7 @@
 ===>  Key Points which we learn in this branch
 
-1. Life cycle of react class component
-2. Mounting
-3. Updating
-4. Unmounting
+1. Props
+2. events
+3. consitions - if, &&, ternary
+4. List - map method
   
