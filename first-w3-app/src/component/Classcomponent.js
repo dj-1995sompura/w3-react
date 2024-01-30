@@ -6,32 +6,43 @@ import './component.css'
 class Person extends Component{
     constructor(props){
         super();
-        this.detail = {age:props.age};
-        this.state={
-            name:"mukesh",
-            sex:"male",
-            age:52,
-            weight:"67 kg"
-        };
-
+        this.state = {favColor:'red'};
     }
 
-    // setstate
-    changeName = () =>{
-        this.setState({name:"ramesh"});
+    // updating
+    shouldComponentUpdate(){
+        return true;
     }
 
-    displayAge() {
-        return <h1>Her age was small</h1>;
+    // mounting
+    // before render method
+    static getDerivedStateFromProps(props, state){
+        return {favColor:props.color}
+    } 
+
+    // after render method
+    componentDidMount(){
+        setTimeout(()=>{
+           this.setState({favColor:"purple"}); 
+        });
     }
+
+
+    // get snapshot method
+    getSnapshotBeforeUpdate(prevProps, prevState){
+        document.getElementById('div1').innerHTML = "Before the update, the favorite was "+ prevState.favColor;
+    }
+
+    componentDidUpdate(){
+        document.getElementById('div2').innerHTML = "After the update, the favorite is "+ this.state.favColor;
+    }
+
     render(){
-        // console.log(this.props.age);
         return (
         <>
-        {this.displayAge()}
-        <h1>Your age is {this.detail.age}</h1>
-        <p>{this.state.name} is a {this.state.age} years old and He is a {this.state.sex} and he got a {this.state.weight} weight.</p>
-        <button onClick={this.changeName}>Change name</button>
+            <h1>My favorite colour is {this.state.favColor}</h1>
+            <div id="div1"></div>
+            <div id="div2"></div>
         </>
         )
     }

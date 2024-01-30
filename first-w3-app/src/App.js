@@ -1,5 +1,6 @@
 import "./App.css";
-import Person from "./component/Classcomponent";
+import Container from "./component/ClassCompUnmount";
+// import Person from "./component/Classcomponent";
 import Brand from "./component/Component";
 
 
@@ -24,7 +25,9 @@ function App() {
       {/* {myelement}
       <h1>{3+5}</h1> */}
       <Brand></Brand>
-      <Person age="30"></Person>
+      {/* <Person age="30" color="violet"></Person> */}
+      <br></br>
+      <Container></Container>
       </header>
     </div>
   );

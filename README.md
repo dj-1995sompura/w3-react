@@ -1,7 +1,7 @@
 ===>  Key Points which we learn in this branch
 
-1. JSX
-2. Class component
-3. Render 2 methods in rendor mathod
-4. Props and state/ setstate methods inside the class component
+1. Life cycle of react class component
+2. Mounting
+3. Updating
+4. Unmounting
   
