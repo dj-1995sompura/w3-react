@@ -1,23 +1,31 @@
 import "./App.css";
-import Listcomp from "./component/Listcomp";
-import Props from "./component/Props";
+import Formcomp from "./component/Formcomp";
+import Usecontext from "./component/Usecontext";
+import Useeffect from "./component/Useeffect";
+import Usereducer from "./component/Usereducer";
+import Useref from "./component/Useref";
+
 
 
 function App() {
-  let item = {car:"red", brand:"ford"}
+  // let item = {car:"red", brand:"ford"}
 
-  let clickHandler = (a,b) =>{
-    alert(a);
-    console.log(b.type);
-  }
+  // let clickHandler = (a,b) =>{
+  //   alert(a);
+  //   console.log(b.type);
+  // }
 
   
   return (
     <div className="App">
       <header className="App-header">
-        <Props color={item} show={true}></Props>
-        <button type="button" onClick={(e)=> clickHandler("chutiya",e)}>Click button</button>
-        <Listcomp></Listcomp>
+        <Formcomp></Formcomp>
+        <Useeffect></Useeffect>
+        <br>
+        </br>
+        <Usecontext></Usecontext>
+        <Useref></Useref>
+        <Usereducer></Usereducer>
       </header>
     </div>
   );
